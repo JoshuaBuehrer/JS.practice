@@ -1,25 +1,18 @@
-const vowels = ["a", "e", "i", "o", "u"];
+
+function isVowel(str){
+    return str === "a" || str === "e" || str === "i" || str === "o" || str === "u";
+}
 
 function getNumberOfVowels(str) {
   let numVowel = 0;
 
-  for (let vowel of vowels) {
-    if (str.includes(vowel)) {
+  for (let char of str) {
+    if (isVowel(char)) { 
       numVowel++;
-    }
+    
   }
+}
 
   return numVowel;
 }
-
-console.log(getNumberOfVowels("hello"));
-
-//GetNumberOfVowels
-  // for a,e,i,o,u
-     //if (string contains (vowel))
-       // ++
-
-//GetNumberOfVowels
-  // for (letter of str)
-    // if (isVowel(letter))
-      // ++
+console.log(getNumberOfVowels(""));
