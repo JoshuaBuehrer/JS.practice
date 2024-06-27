@@ -1,18 +1,29 @@
 
-function isVowel(str){
-    return str === "a" || str === "e" || str === "i" || str === "o" || str === "u";
+function sumOfMultiple(limit) {
+
+if (limit < 0){
+  return 0;
 }
 
-function getNumberOfVowels(str) {
-  let numVowel = 0;
+  let total = 0;
 
-  for (let char of str) {
-    if (isVowel(char)) { 
-      numVowel++;
+  for (let i = 0; i < limit; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      total += i;
+    }
     
   }
+  return total
 }
 
-  return numVowel;
-}
-console.log(getNumberOfVowels(""));
+console.log(sumOfMultiple(10))
+
+
+module.exports = sumOfMultiple;
+
+
+/*
+find numbers bellow limit that are multiples of 3 / 5
+
+if they are multiples of 3 / 5, add them together
+*/
