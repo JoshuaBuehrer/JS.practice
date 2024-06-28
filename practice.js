@@ -1,29 +1,15 @@
+function stringSplit(str) {
+  arr = [];
 
-function sumOfMultiple(limit) {
-
-if (limit < 0){
-  return 0;
-}
-
-  let total = 0;
-
-  for (let i = 0; i < limit; i++) {
-    if (i % 3 == 0 || i % 5 == 0) {
-      total += i;
+  for (let i = 0; i < str.length; i += 2) {
+    let pair = str.substring(i, i + 2);
+    if (pair === 1) {
+      pair += "_";
     }
-    
+    arr.push(pair);
   }
-  return total
+  return arr;
 }
 
-console.log(sumOfMultiple(10))
+console.log(stringSplit("abcde"));
 
-
-module.exports = sumOfMultiple;
-
-
-/*
-find numbers bellow limit that are multiples of 3 / 5
-
-if they are multiples of 3 / 5, add them together
-*/
